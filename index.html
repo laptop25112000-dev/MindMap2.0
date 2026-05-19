@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MindMap personality quiz by Divyansh. Discover your personality type, strengths, and hidden traits instantly." />
+  <meta name="keywords" content="MindMap, personality quiz, AI psychology, Divyansh, personality test" />
+  <meta name="author" content="Divyansh Mishra" />
+  <meta property="og:title" content="MindMap — Personality Quiz" />
+  <meta property="og:description" content="Discover your personality type with a dynamic 15-question trait-based quiz." />
+  <meta property="og:type" content="website" />
+  <title>MindMap — Personality Quiz by Divyansh</title>
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="theme-color" content="#090d1f" />
+  <link rel="canonical" href="https://YOUR-SITE-URL.netlify.app/" />
+  <meta property="og:url" content="https://YOUR-SITE-URL.netlify.app/" />
+  <meta property="og:site_name" content="MindMap" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MindMap — Personality Quiz by Divyansh" />
+  <meta name="twitter:description" content="Discover your personality type, top traits, strengths, hidden trait, and growth tip instantly with MindMap." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="orb orb-one"></div>
+  <div class="orb orb-two"></div>
+  <div class="orb orb-three"></div>
+
+  <header class="nav reveal">
+    <a class="brand" href="#home" aria-label="MindMap home">
+      <span class="brand-icon">🧠</span>
+      <span>MindMap</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#quiz">Quiz</a>
+      <a href="#about">About</a>
+    </nav>
+    <a class="nav-button" href="#quiz">Start Quiz</a>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-copy reveal">
+        <div class="pill">✨ Free · 15 Questions · 12 Results</div>
+        <h1>Discover your personality with a beautiful AI-style quiz.</h1>
+        <p>MindMap uses 15 questions and 6 personality traits to reveal one of 12 dynamic personality profiles with strengths, hidden traits, and growth tips.</p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#quiz">Take the Test <span>→</span></a>
+          <a class="secondary-btn" href="#features">See Features</a>
+        </div>
+      </div>
+
+      <div class="phone-card reveal delay-1" aria-hidden="true">
+        <div class="phone-top"><span></span><span></span><span></span></div>
+        <div class="preview-card gradient-card">
+          <small>Personality Preview</small>
+          <h2>The Strategist</h2>
+          <p>Drive · Openness · Vision</p>
+        </div>
+        <div class="mini-grid">
+          <div><strong>92%</strong><small>Clarity</small></div>
+          <div><strong>87%</strong><small>Focus</small></div>
+        </div>
+        <div class="bar"><span style="width:88%"></span></div>
+        <div class="bar"><span style="width:64%"></span></div>
+        <div class="bar"><span style="width:75%"></span></div>
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <div class="section-heading reveal">
+        <span class="pill">Why use it?</span>
+        <h2>Designed to feel modern, fast, and premium.</h2>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card reveal">
+          <span>🎯</span>
+          <h3>Dynamic Personality Result</h3>
+          <p>Get one of 12 personality profiles using trait-based scoring, strengths, hidden traits, and growth tips.</p>
+        </article>
+        <article class="feature-card reveal delay-1">
+          <span>🔎</span>
+          <h3>Searchable Quiz</h3>
+          <p>Search the 15-question quiz instantly while answering.</p>
+        </article>
+        <article class="feature-card reveal delay-2">
+          <span>🌐</span>
+          <h3>Website Ready</h3>
+          <p>This is pure HTML, CSS, and JavaScript, so you can host it online easily.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="quiz" class="quiz-section reveal">
+      <div class="quiz-shell">
+        <div id="nameScreen" class="screen active">
+          <div class="quiz-header center">
+            <span class="big-emoji">🧠</span>
+            <h2>MindMap Personality Quiz</h2>
+            <p>Enter your name to personalize your result.</p>
+          </div>
+          <div class="input-row">
+            <input id="nameInput" type="text" placeholder="Enter your name..." autocomplete="name" />
+            <button id="startBtn" class="primary-btn button-reset">Start Quiz</button>
+          </div>
+        </div>
+
+        <div id="questionScreen" class="screen">
+          <div class="quiz-header">
+            <div>
+              <span id="greeting" class="pill">Hey!</span>
+              <h2>Answer honestly for best results.</h2>
+            </div>
+            <div class="progress-text"><span id="answeredCount">0</span>/15 answered</div>
+          </div>
+          <div class="progress"><span id="progressFill"></span></div>
+          <input id="searchInput" class="search" type="search" placeholder="🔎 Search questions or options, e.g. conflict, friends, pressure..." />
+          <div id="questionsWrap" class="questions-wrap"></div>
+          <p id="warning" class="warning">Please answer all questions before revealing your result.</p>
+          <button id="submitBtn" class="primary-btn button-reset full" disabled>🧠 Reveal My Personality</button>
+        </div>
+
+        <div id="resultScreen" class="screen">
+          <div id="resultContent"></div>
+          <button id="retakeBtn" class="secondary-btn button-reset full">🔄 Retake Quiz</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about reveal">
+      <h2>Made & Designed by Divyansh</h2>
+      <p>No login. No database. No data stored. Everything runs privately in the browser.</p>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> MindMap · Personality Quiz Website</footer>
+  <script src="script.js"></script>
+</body>
+</html>
