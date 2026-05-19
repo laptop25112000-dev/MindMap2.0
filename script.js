@@ -442,8 +442,6 @@ function showResult() {
       <h3>Growth Tip</h3>
       <div class="insight">${type.growthTip}</div>
 
-      <div class="insight">Overall personality intensity: ${average}/100</div>
-    </div>`;
 
   show("resultScreen");
 }
